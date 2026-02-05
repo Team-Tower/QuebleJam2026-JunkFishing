@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeaderboardManager : MonoBehaviour
+{
+    [SerializeField] private int maxEntries = 10;
+
+    public event Action<IReadOnlyList<int>> LeaderboardChanged;
+
+    private readonly List<int> scores = new List<int>();
+
+    public IReadOnlyList<int> Scores => scores;
+
+    public void RecordScore(int score)
     {
-        [SerializeField] private int maxEntries = 10;
+        scores.Add(score);
+        scores.Sort((a, b) => b.CompareTo(a));
 
-        public event Action<IReadOnlyList<int>> LeaderboardChanged;
-
-        private readonly List<int> scores = new List<int>();
-
-        public IReadOnlyList<int> Scores => scores;
-
-        public void RecordScore(int score)
+        if (scores.Count > maxEntries)
         {
-            scores.Add(score);
-            scores.Sort((a, b) => b.CompareTo(a));
-
-            if (scores.Count > maxEntries)
-            {
-                scores.RemoveRange(maxEntries, scores.Count - maxEntries);
-            }
-
-            LeaderboardChanged?.Invoke(scores);
+            scores.RemoveRange(maxEntries, scores.Count - maxEntries);
         }
 
-        public void Clear()
-        {
-            scores.Clear();
-            LeaderboardChanged?.Invoke(scores);
-        }
+        LeaderboardChanged?.Invoke(scores);
     }
+
+    public void Clear()
+    {
+        scores.Clear();
+        LeaderboardChanged?.Invoke(scores);
+    }
+}

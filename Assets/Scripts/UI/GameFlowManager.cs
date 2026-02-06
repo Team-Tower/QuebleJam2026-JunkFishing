@@ -7,6 +7,8 @@ public class GameFlowManager : MonoBehaviour
     [SerializeField] private TimerManager timerManager;
     [SerializeField] private LeaderboardManager leaderboardManager;
     [SerializeField] private EvidenceCounterManager evidenceCounterManager;
+    [SerializeField] private CatchCounterManager catchCounterManager;
+    [SerializeField] private RiverSpawner[] riverSpawners;
 
     public event Action<GameState> StateChanged;
 
@@ -27,6 +29,11 @@ public class GameFlowManager : MonoBehaviour
         if (evidenceCounterManager != null)
         {
             evidenceCounterManager.SetCountingEnabled(false);
+        }
+
+        if (catchCounterManager != null)
+        {
+            catchCounterManager.SetCountingEnabled(false);
         }
     }
 
@@ -62,6 +69,8 @@ public class GameFlowManager : MonoBehaviour
         scoreManager?.SetScoringEnabled(true);
         evidenceCounterManager?.ResetCounts();
         evidenceCounterManager?.SetCountingEnabled(true);
+        catchCounterManager?.ResetCounts();
+        catchCounterManager?.SetCountingEnabled(true);
         timerManager?.StartTimer();
         SetState(GameState.Running);
     }
@@ -77,7 +86,6 @@ public class GameFlowManager : MonoBehaviour
         if (scoreManager != null)
         {
             leaderboardManager?.RecordScore(scoreManager.Score);
-            scoreManager.ResetScore();
             scoreManager.SetScoringEnabled(false);
         }
 
@@ -85,12 +93,18 @@ public class GameFlowManager : MonoBehaviour
         {
             evidenceCounterManager.SetCountingEnabled(false);
         }
+
+        if (catchCounterManager != null)
+        {
+            catchCounterManager.SetCountingEnabled(false);
+        }
         SetState(GameState.Ended);
     }
 
     public void RestartGame()
     {
         EndGame();
+        DespawnAllHookables();
         StartGame();
     }
 
@@ -108,6 +122,23 @@ public class GameFlowManager : MonoBehaviour
         if (CurrentState == GameState.Running)
         {
             EndGame();
+        }
+    }
+
+    private void DespawnAllHookables()
+    {
+        if (riverSpawners == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < riverSpawners.Length; i++)
+        {
+            RiverSpawner spawner = riverSpawners[i];
+            if (spawner != null)
+            {
+                spawner.DespawnAllActive();
+            }
         }
     }
 

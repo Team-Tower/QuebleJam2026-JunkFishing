@@ -156,7 +156,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15
   highlightSecondsRealtime: 0.12
-  sinkOnFail: 0
+  sinkOnFail: 1
   sinkSpeed: 1.5
   sinkLifetimeSeconds: 1
 --- !u!114 &-5278787233662088548
@@ -173,10 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseVelocity: {x: -2, y: 0}
   speedJitterPercent: 0.2
-  bobAmplitude: 0.08
+  bobAmplitude: 0.001
   bobFrequency: 0
-  allowSpin: 0
-  spinDegPerSec: 40
+  allowSpin: 1
+  spinDegPerSec: 180
 --- !u!50 &2558512050296125202
 Rigidbody2D:
   serializedVersion: 5

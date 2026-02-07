@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5c8300a0cc0098c46ac92049978ff145, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -173,8 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseVelocity: {x: -2, y: 0}
   speedJitterPercent: 0.2
-  bobAmplitude: 0.08
-  bobFrequency: 0
+  bobAmplitude: 0.002
+  bobFrequency: 5
   allowSpin: 0
   spinDegPerSec: 40
 --- !u!50 &-8638962464202647328

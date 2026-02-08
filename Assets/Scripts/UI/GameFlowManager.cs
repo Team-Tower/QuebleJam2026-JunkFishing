@@ -127,7 +127,7 @@ public class GameFlowManager : MonoBehaviour
 
     private void DespawnAllHookables()
     {
-        if (riverSpawners == null)
+        if (riverSpawners == null || riverSpawners.Length == 0)
         {
             return;
         }

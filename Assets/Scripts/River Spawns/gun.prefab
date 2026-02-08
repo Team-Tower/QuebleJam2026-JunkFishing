@@ -156,7 +156,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15
   highlightSecondsRealtime: 0.12
-  sinkOnFail: 1
+  sinkOnFail: 0
   sinkSpeed: 1.5
   sinkLifetimeSeconds: 1
 --- !u!114 &-5278787233662088548

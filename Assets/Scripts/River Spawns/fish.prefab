@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectType: 1
   weightClass: 0
-  baseScore: 100
+  baseScore: -100
   isHookable: 1
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15

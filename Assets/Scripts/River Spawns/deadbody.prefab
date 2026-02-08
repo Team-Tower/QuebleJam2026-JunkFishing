@@ -152,6 +152,8 @@ MonoBehaviour:
   objectType: 0
   weightClass: 2
   baseScore: 300
+  grantsEvidence: 1
+  evidenceType: 4
   isHookable: 1
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15
@@ -177,6 +179,7 @@ MonoBehaviour:
   bobFrequency: 0
   allowSpin: 0
   spinDegPerSec: 40
+  gameFlowManager: {fileID: 0}
 --- !u!50 &2400875269851611911
 Rigidbody2D:
   serializedVersion: 5

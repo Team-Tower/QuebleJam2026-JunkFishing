@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3914205914137107865}
   - component: {fileID: 115212916827650530}
   - component: {fileID: -5278787233662088548}
-  - component: {fileID: 1162527566427054675}
+  - component: {fileID: 2558512050296125202}
   m_Layer: 6
-  m_Name: bloody trashbag
+  m_Name: hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 21bb195b4d58ea442bd4e588b33c0bda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bab96b17a45dd844f8787fbfdb4b97b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectType: 0
-  weightClass: 1
-  baseScore: 200
+  weightClass: 0
+  baseScore: 100
   grantsEvidence: 1
-  evidenceType: 2
+  evidenceType: 3
   isHookable: 1
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15
@@ -175,12 +175,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseVelocity: {x: -2, y: 0}
   speedJitterPercent: 0.2
-  bobAmplitude: 0.08
+  bobAmplitude: 0.001
   bobFrequency: 0
-  allowSpin: 0
-  spinDegPerSec: 40
+  allowSpin: 1
+  spinDegPerSec: 180
   gameFlowManager: {fileID: 0}
---- !u!50 &1162527566427054675
+--- !u!50 &2558512050296125202
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0

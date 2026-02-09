@@ -153,7 +153,7 @@ MonoBehaviour:
   weightClass: 0
   baseScore: 100
   grantsEvidence: 1
-  evidenceType: 3
+  evidenceType: 1
   isHookable: 1
   spriteRenderer: {fileID: 8616214525165347185}
   highlightScaleMultiplier: 1.15

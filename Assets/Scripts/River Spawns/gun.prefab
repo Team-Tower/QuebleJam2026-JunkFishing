@@ -173,10 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseVelocity: {x: -2, y: 0}
   speedJitterPercent: 0.2
-  bobAmplitude: 0.001
+  bobAmplitude: 0.08
   bobFrequency: 0
-  allowSpin: 1
-  spinDegPerSec: 180
+  allowSpin: 0
+  spinDegPerSec: 40
 --- !u!50 &2558512050296125202
 Rigidbody2D:
   serializedVersion: 5

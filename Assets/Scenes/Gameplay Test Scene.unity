@@ -578,13 +578,25 @@ MonoBehaviour:
   despawnLine: {fileID: 1018346020}
   entries:
   - prefab: {fileID: 5012532151916056598, guid: 1c8ad746213da7b44a9d8c9d0be9a1f2, type: 3}
-    weight: 1
+    weight: 2
   - prefab: {fileID: 5012532151916056598, guid: 276e6beeab96d104a9ee557bd87316d7, type: 3}
-    weight: 3
+    weight: 5
   - prefab: {fileID: 5012532151916056598, guid: f4bc2859fc806864fb4639b89930df6b, type: 3}
     weight: 1
   - prefab: {fileID: 5012532151916056598, guid: 83e00bc37a17ff84c898a61125212076, type: 3}
+    weight: 2
+  - prefab: {fileID: 5012532151916056598, guid: ebc2d236b02b6b649bec95ef35ee2eae, type: 3}
     weight: 1
+  - prefab: {fileID: 5012532151916056598, guid: 0f5736480c2aa0f448bacd9fbffc48ca, type: 3}
+    weight: 2
+  - prefab: {fileID: 5012532151916056598, guid: ee78727fac7a5624882353c5d2a05091, type: 3}
+    weight: 2
+  - prefab: {fileID: 5012532151916056598, guid: 1a750d036b30b4541bb08fac25419f40, type: 3}
+    weight: 3
+  - prefab: {fileID: 5012532151916056598, guid: 37e6abdad6b740340b11672a0b39d892, type: 3}
+    weight: 4
+  - prefab: {fileID: 5012532151916056598, guid: 19d148db3367bc14daf5df5cb42c8bac, type: 3}
+    weight: 3
   lanesY:
   - 0.6
   - -0.1
@@ -1613,7 +1625,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1617996783}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1624,7 +1636,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &824898413
 GameObject:
